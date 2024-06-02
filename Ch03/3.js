@@ -87,4 +87,4 @@ while(guess != random){
   guess = prompt("Guess the number between 1 to 10");
   tried++;
 }
-alert("Congratulations! You have guessed the number in " + tried + " attempts");
+alert("Congratulations! You have guessed the number in ", tried , " attempts");
