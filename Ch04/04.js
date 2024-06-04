@@ -28,3 +28,14 @@ for (let off of list)
         off = off-(off*offer);
         console.log(`Value after 10% off ${off}`);
     }
+// Practice Question
+
+let p = ["Bloomberg","Microsoft","Uber","Google","IBM","Netflix"];
+p.shift();
+console.log(p);
+
+p.splice(1,1,"OLA");
+console.log(p);
+
+p.push("Amazon");
+console.log(p);
