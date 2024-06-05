@@ -21,3 +21,10 @@ let sqr = arr.map((val)=>{
     return val**2;
 })
 console.log(sqr); // This map method returns new array on which the operation is performed as per user
+
+//Filter Method
+let arr2 = arr.filter((val)=>
+{
+    return val > 4; //this also return new array just like map but we can filter the array here
+})
+console.log(arr2);
