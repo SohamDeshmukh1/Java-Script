@@ -9,7 +9,15 @@ arr.forEach((val)=>{
 )
 
 
+let sr1 = arr.forEach((val)=>{
+    val**2; })
+console.log(sr1);// This method for each only perform operation does not create new array
+// this wont work like this 
+
 arr.forEach((val)=>{
-    console.log(`Square of ${val} value is ${val**2}`);
-}
-)
+    console.log(`Square of ${val} is ${val**2}`);}) // This does not return new array only perform operation and does not change the existing array
+
+let sqr = arr.map((val)=>{
+    return val**2;
+})
+console.log(sqr); // This map method returns new array on which the operation is performed as per user
