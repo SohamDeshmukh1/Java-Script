@@ -1,0 +1,10 @@
+#box{
+    background-color: aquamarine;
+    height: 100px;
+    width: 100px;
+    color: red;
+    border: 1px solid black;
+    text-align: center;
+}
+/* for id we use in css (.) and for class #
+   in Js we use (.) of class and # for id's */
