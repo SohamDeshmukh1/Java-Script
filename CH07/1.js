@@ -9,7 +9,7 @@ div1.style.color = 'black';//node name.style.attribute (we can acces and put css
 div2.style.color = 'black';
 
 let btn1 = document.createElement("button");
-btn1.textContent = "1 HEHEHHE";
+btn1.textContent = "1 YHEH";
 
 let newbtn = document.createElement("button");//Creating a btn
 newbtn.innerText = "Submit Form";
