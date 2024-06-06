@@ -1,7 +1,7 @@
 #box{
     background-color: aquamarine;
-    height: 200px;
-    width: 100px;
+    height: auto;
+    width: auto;
     color: red;
     border: 1px solid black;
     text-align: center;
