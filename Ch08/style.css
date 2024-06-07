@@ -5,13 +5,27 @@ body {
     background-color: #f4f4f4;
 }
 
-.container {
+.dark{
+    background-color: #333;
+    color: #f4f4f4;
+}
+.light{
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* .container {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
     background-color: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+
+.div{
+    align-items: center;
 }
+
 p{
     text-align: center;
 }
