@@ -1,0 +1,25 @@
+body{
+    background-color: black;
+    text-align: center;
+    font-weight: bold;
+    color: whitesmoke;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.container{
+    height: 70vh;
+    width: 60vh;
+}
+.game{
+    height: 90%;
+    width: 50%;
+}
+.box{
+    height: 20vmin;
+    width: 25%;
+    border-color: aliceblue;
+    margin: 2px;
+    border-radius: 1rem;
+    background-color: black;
+    font-size: 70px;
+    color: white;
+}
