@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+header{
+    background-color:#000C6F;
+    height:10vh;
+    align-content: center;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.choices{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+}
+.choice{
+    margin: 30px;
+}
+.scoreboard{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.score{
+    margin: 30px;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.txt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    font-size: 34px;
+    background-color: #e72e2e;
+    text-align: center;
+}
