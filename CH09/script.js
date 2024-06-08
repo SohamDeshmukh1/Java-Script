@@ -23,23 +23,40 @@ let winpattern = [
     [2, 4, 6],
 ];
 
-btns.forEach((boxes)=>
-{
-    boxes.addEventListener('click',()=>{
-        if(turnO){
+btns.forEach((boxes) => {
+    boxes.addEventListener('click', () => {
+        if (turnO) {
             boxes.textContent = "O";
             updateturns();
         }
-        else{
+        else {
             boxes.textContent = "X";
             updateturns();
-        }    
+        }
         boxes.disabled = true;
+        checkwinner();
     })
 })
-resbtn.addEventListener('click',()=>{
-    btns.forEach((boxes)=>{
+
+resbtn.addEventListener('click', reset());
+function reset() {
+    btns.forEach((boxes) => {
         boxes.textContent = "";
         boxes.disabled = false;
-    });
-});
+    })
+}
+
+function checkwinner() {
+    for (let pat of winpattern) {
+        let val1 = btns[pat[0]].innerText;
+        let val2 = btns[pat[1]].innerText;
+        let val3 = btns[pat[2]].innerText;
+        if (val1 != "", val2 != "", val3 != "") {
+            if (val1 === val2 && val2 === val3) {
+                alert(`The Winner is player ${val1}`)
+                reset();
+            }
+        }
+    }
+
+}
