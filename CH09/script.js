@@ -51,7 +51,7 @@ function checkwinner() {
         let val1 = btns[pat[0]].innerText;
         let val2 = btns[pat[1]].innerText;
         let val3 = btns[pat[2]].innerText;
-        if (val1 != "", val2 != "", val3 != "") {
+        if (val1 != "" && val2 != "" && val3 != "") {
             if (val1 === val2 && val2 === val3) {
                 alert(`The Winner is player ${val1}`)
                 reset();
