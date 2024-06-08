@@ -30,8 +30,6 @@ button{
     border-color: aliceblue;
 }
 .reset{
-    width: 18vmin;
     font-size: 20px;
-    /* border-radius: 1rem; */
     border-color: aliceblue; 
 }
