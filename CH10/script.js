@@ -1,46 +1,53 @@
 let cho = document.querySelectorAll(".choice");
 let comp = document.querySelector('.compScore');
-let user = document.querySelector('.userScore');
+let user = document.querySelector('.user');
 let txt = document.querySelector('#txt1');
+
+let userScore1 = 0;
+let compScore1 = 0;
 
 function randstrig() {
     let string = ['rock', 'paper', 'scissors'];
     let random = Math.floor(Math.random() * string.length);
     return string[random];
 }
-let userwin = true;
+
 let playgame = (userchoice) => {
     let computer = randstrig();
-    if (userchoice == computer) {
+    if (userchoice === computer) {
         txt.textContent = "It's a tie!"
-    }
-    else {
-        if (userchoice == 'rock') {
-            userwin = computer == 'paper' ? true : false;
+        }else {
+            let userwin = false;
+            if (userchoice === 'rock') {
+                userwin = computer === 'scissors';
+                txt.textContent = userwin ? "You win! Rock beats Scissors" : "You lose! Paper beats Rock";
+            } else if (userchoice === 'paper') {
+                userwin = computer === 'rock';
+                txt.textContent = userwin ? "You win! Paper beats Rock" : "You lose! Scissors beats Paper";
+            } else if (userchoice === 'scissors') {
+                userwin = computer === 'paper';
+                txt.textContent = userwin ? "You win! Scissors beats Paper" : "You lose! Rock beats Scissors";
+            }
+    
+            if (userwin) {
+                userScore1++;
+            } else {
+                compScore1++;
+            }
+            comp.textContent = compScore1;
+            user.textContent = userScore1;
         }
-        if (userchoice == 'paper') {
-            userwin = computer == 'rock' ? false : true;
-        }
-        if (userchoice == 'scissor') {
-            userwin = computer == 'rock' ? false : true;
-        }
     }
-}
-function score(userwin)
-{
-    if(userwin){
-        user.textContent = parseInt(user.textContent) +  a ;
-    }
-    else{
-        comp.textContent = parseInt(comp.textContent) + a ;
-    }
-}
 
 cho.forEach((choice) => {
     choice.addEventListener("click", () => {
         let userchoice = choice.getAttribute('id');
         playgame(userchoice);
-    })
-})
+    });
+});
+
+    
+
+    
 
 
