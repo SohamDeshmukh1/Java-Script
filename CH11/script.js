@@ -33,3 +33,14 @@ class BMW {
 let S100 = new BMW();
 S100.start();
 S100.stop();
+
+// using this
+
+class Audi{
+    varient(name){
+        this.varientname = name;
+        console.log(`The varient name is ${this.varientname}`);
+    }
+}
+let s6 = new Audi();
+s6.varient('S6100'); // here i kinda knows what i have done but kinda not
