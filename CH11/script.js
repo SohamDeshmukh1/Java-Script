@@ -19,3 +19,17 @@ school.__proto__ = students;
 
 console.log(school.age);
 console.log(school.address.city);
+
+class BMW {
+    start(){
+        console.log("BMW is started");
+    }
+    stop()
+    {   
+        console.log("BMW is stopped");
+    }
+}
+
+let S100 = new BMW();
+S100.start();
+S100.stop();
