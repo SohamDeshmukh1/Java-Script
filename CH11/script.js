@@ -44,3 +44,15 @@ class Audi{
 }
 let s6 = new Audi();
 s6.varient('S6100'); // here i kinda knows what i have done but kinda not
+
+// using constructor
+class cars {
+    constructor(name){
+        this.name = name;
+    }
+    name(){
+        console.log(`The name of brand is ${this.name}`);
+    }
+}
+let brand = new cars()
+brand.name('Audi');
