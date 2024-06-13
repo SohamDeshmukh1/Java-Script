@@ -14,7 +14,7 @@ class carsShow extends carsget{
     }
 }
 
-let sup1 = new carsShow('Audi','s100',2024);
+let sup1 = new carsShow('Audi','S100',2024);
 // sup1.brand = "Toyota";
 // sup1.model = "Camry";
 // sup1.year = 2015; Both method works

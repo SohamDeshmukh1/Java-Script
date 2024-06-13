@@ -44,7 +44,8 @@ class Audi{
 }
 let s6 = new Audi();
 s6.varient('S6100'); // here i kinda knows what i have done but kinda not
-
+// Dont mind the Cars name here ;-;
+// I am just trying to understand the concept of this keyword and prototype chain
 // using constructor
 class cars {
     constructor(name){
