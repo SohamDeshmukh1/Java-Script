@@ -19,4 +19,24 @@ let sup1 = new carsShow('Audi','S100',2024);
 // sup1.model = "Camry";
 // sup1.year = 2015; Both method works
 sup1.getCarInfo();
+
 // Single Inheritence
+
+class worker{
+    works(){
+        console.log(`worker workers`);
+    }
+    sleep(){
+        console.log(`They also sleep`);
+    }
+}
+class people extends worker{
+    spendTime()
+    {
+        console.log(`They also spend time`);
+    }
+}
+let person1 = new people();
+person1.works();
+person1.sleep();
+person1.spendTime();
