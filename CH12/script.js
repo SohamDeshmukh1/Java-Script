@@ -39,10 +39,13 @@ setTimeout(()=>{
 },1000); // This will all process will get execute in 5 sec till then all the code above gets executed
 
 // Some timeout + callback example 
+// this types is also called as CallBack hell
 function data(getdata,nextdata){
     setTimeout(()=>{
         console.log(`the data is ${getdata}`);
-        nextdata();
+        if(nextdata){
+            nextdata();
+        }
     },2000);//delay of 2000 ms = 2 sec;
 }
 data(1 , ()=>
