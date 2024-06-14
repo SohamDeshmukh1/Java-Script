@@ -22,3 +22,18 @@ function greet(){
     console.log(`Hello `);
 }
 say(greet);
+// More callback practice
+
+setTimeout(()=>{
+    function calculator(a , b , add,sub){
+        add(a,b);
+        sub(a,b);
+    }
+    function add(a,b){
+        console.log(`Addition is ${a+b}`)
+    }
+    function sub(a,b){
+        console.log(`Subtraction is ${a-b}`)
+    }
+    calculator(5,2,add,sub);
+},5000); // This will all process will get execute in 5 sec till then all the code above gets executed
