@@ -3,53 +3,69 @@
 console.log(`Print 1`);
 console.log(`Print 2`);
 
-setTimeout( ()=>{
+setTimeout(() => {
     console.log(`Got Printed With 1 Sec Delay`);
-} ,1000);
+}, 1000);
 
 console.log(`Print 3`);
 
 // Callback : calling 1 function into another 
 
-function say(hello){
-    setTimeout(()=>{
+function say(hello) {
+    setTimeout(() => {
         console.log(`I Am Soham Deshmukh`);
         hello();
-    },1000);
+    }, 1000);
 }
 
-function greet(){
+function greet() {
     console.log(`Hello `);
 }
 say(greet);
 // More callback practice
 
-setTimeout(()=>{
-    function calculator(a , b , add,sub){
-        add(a,b);
-        sub(a,b);
+setTimeout(() => {
+    function calculator(a, b, add, sub) {
+        add(a, b);
+        sub(a, b);
     }
-    function add(a,b){
-        console.log(`Addition is ${a+b}`)
+    function add(a, b) {
+        console.log(`Addition is ${a + b}`)
     }
-    function sub(a,b){
-        console.log(`Subtraction is ${a-b}`)
+    function sub(a, b) {
+        console.log(`Subtraction is ${a - b}`)
     }
-    calculator(5,2,add,sub);
-},1000); // This will all process will get execute in 5 sec till then all the code above gets executed
+    calculator(5, 2, add, sub);
+}, 1000); // This will all process will get execute in 5 sec till then all the code above gets executed
 
 // Some timeout + callback example 
 // this types is also called as CallBack hell
-function data(getdata,nextdata){
-    setTimeout(()=>{
+function data(getdata, nextdata) {
+    setTimeout(() => {
         console.log(`the data is ${getdata}`);
-        if(nextdata){
+        if (nextdata) {
             nextdata();
         }
-    },2000);//delay of 2000 ms = 2 sec;
+    }, 2000);//delay of 2000 ms = 2 sec;
 }
-data(1 , ()=>
-{
-    data(2); // in this i gave value to nextdata in data so the data will fetch value from here
+data(1, () => {
+    console.log('Getting data 2 ....')
+    data(2, () => {
+        console.log('Getting data 3 ....')
+
+        data(3, () => {
+            console.log('Getting data 4 ....')
+
+            data(4, () => {
+                console.log('Getting data 5 ....')
+
+                data(5, () => {
+                    console.log('Getting data 6 ....')
+
+                    console.log(`All data is printed`);
+                })
+            })
+        });
+    }); // in this i gave value to nextdata in data so the data will fetch value from here
     // some small issue
-})
+});
