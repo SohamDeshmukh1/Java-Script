@@ -36,4 +36,4 @@ setTimeout(()=>{
         console.log(`Subtraction is ${a-b}`)
     }
     calculator(5,2,add,sub);
-},4000); // This will all process will get execute in 5 sec till then all the code above gets executed
+},5000); // This will all process will get execute in 5 sec till then all the code above gets executed
