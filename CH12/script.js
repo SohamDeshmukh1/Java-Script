@@ -40,32 +40,40 @@ setTimeout(() => {
 
 // Some timeout + callback example 
 // this types is also called as CallBack hell
-function data(getdata, nextdata) {
+function data(getdata) {
+   return new Promise((resolve,reject)=>{
     setTimeout(() => {
         console.log(`the data is ${getdata}`);
-        if (nextdata) {
-            nextdata();
-        }
-    }, 2000);//delay of 2000 ms = 2 sec;
-}
-data(1, () => {
-    console.log('Getting data 2 ....')
-    data(2, () => {
-        console.log('Getting data 3 ....')
+        resolve();
+    }, 2000);
+   })
+};
 
-        data(3, () => {
-            console.log('Getting data 4 ....')
+let n1 = data(1);
+n1.then((res)=>{
+    data(2).then();
+})
 
-            data(4, () => {
-                console.log('Getting data 5 ....')
 
-                data(5, () => {
-                    console.log('Getting data 6 ....')
+// data(1, () => {
+//     console.log('Getting data 2 ....')
+//     data(2, () => {
+//         console.log('Getting data 3 ....')
 
-                    console.log(`All data is printed`);
-                })
-            })
-        });
-    }); // in this i gave value to nextdata in data so the data will fetch value from here
-    // some small issue
-});
+//         data(3, () => {
+//             console.log('Getting data 4 ....')
+
+//             data(4, () => {
+//                 console.log('Getting data 5 ....')
+
+//                 data(5, () => {
+//                     console.log('Getting data 6 ....')
+
+//                     console.log(`All data is printed`);
+//                 })
+//             })
+//         });
+//     }); // in this i gave value to nextdata in data so the data will fetch value from here
+//     // some small issue
+// }); Doing thhis with promises
+
