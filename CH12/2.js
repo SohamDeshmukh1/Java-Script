@@ -17,3 +17,4 @@ function data(getData,nextData){
 data(1,()=>{
     data(2);
 });
+
