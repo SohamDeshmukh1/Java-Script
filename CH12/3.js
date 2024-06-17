@@ -3,8 +3,8 @@
 const pro = ()=>{
     return new Promise((resolve,reject)=>{
         console.log(`This is a promise i am making`);
-        resolve(`Resolved`);
-        // reject(`Rejected`);
+        // resolve(`Resolved`);
+        reject(`Invalid Data Output`);
     });
 }
 
@@ -14,5 +14,5 @@ n1.then((res)=>{
 });
 
 n1.catch((err)=>{
-console.log(`rejected`,err);
+console.log(`Rejected, `,err);
 })
