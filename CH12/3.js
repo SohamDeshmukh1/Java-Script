@@ -2,8 +2,8 @@
 const pro = ()=>{
     return new Promise((resolve,reject)=>{
         console.log(`This is a promise i am making`);
-        // resolve(`Resolved`);
-        reject(`Invalid Data Output`);
+        resolve(`Resolved`);
+        // reject(`Invalid Data Output`);
     });
 }
 let n1 = pro();
@@ -22,11 +22,13 @@ function Asyn(){
     return new Promise((resolve,reject)=>{
        setTimeout(()=>{
         console.log('Data 1');
-        resolve(`Sucess`);
+        resolve(`Success`);
        },3000);
     });
 };
-console.log(`fetching data`);
+setTimeout(()=>{
+    console.log(`fetching data`); // did this to make out put look better
+},1000);
 let new1 = Asyn();
 new1.then((res)=>
 {
