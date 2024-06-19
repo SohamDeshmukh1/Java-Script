@@ -11,7 +11,7 @@ n1.then((res)=>{
     console.log(`promise resolved`,res)
 });
 n1.catch((err)=>{
-console.log(`Rejected, `,err);
+console.log(`Rejected`,err);
 })
 
 // Async function example
