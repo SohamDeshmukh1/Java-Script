@@ -14,10 +14,15 @@
 <body>
     <h2>Currency Converter</h2>
     <hr>
+    <form>
     <div id="parent">
         <div id="child">
             <p>From</p>
             <img src="https://flagsapi.com/US/flat/64.png"><br>
+            <select name="from" id="from">
+                <option value="USD">USD</option>
+                <option value="INR" selected>INR</option>
+            </select>
             <input type="number" value="1">
         </div>
 
@@ -28,13 +33,17 @@
 
         <div id="child">
             <p>To</p>
-            <img src="https://flagsapi.com/IN/flat/64.png">
-            <br>
+            <img src="https://flagsapi.com/IN/flat/64.png"><br>
+            <select name="from" id="from">
+                <option value="USD">USD</option>
+                <option value="INR" selected>INR</option>
+            </select>
             <input type="number" value="90">
         </div>
-    </div>
-    <p>The Exchange rate is</p>
-    <p id="exchange"></p>
+</div>
+</form>
+<p>The Exchange rate is</p>
+<p id="exchange">: </p>
 </body>
 <script src="script.js"></script>
 </html>
