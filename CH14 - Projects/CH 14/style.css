@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+    /* background-color: black; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* color: aliceblue; */
+}
+#parent{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#child{
+    font-size: x-large;
+}
+p{
+    font-size: x-large;
+}
