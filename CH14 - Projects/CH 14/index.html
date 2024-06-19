@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
@@ -19,11 +19,11 @@
         <div id="child">
             <p>From</p>
             <img src="https://flagsapi.com/US/flat/64.png"><br>
-            <select name="from" id="from">
+            <select name="dropdown" id="from">
                 <option value="USD">USD</option>
                 <option value="INR" selected>INR</option>
             </select>
-            <input type="number" value="1">
+            <input type="number" value="1" id="input">
         </div>
 
         <div id="child">
@@ -34,16 +34,17 @@
         <div id="child">
             <p>To</p>
             <img src="https://flagsapi.com/IN/flat/64.png"><br>
-            <select name="from" id="from">
+            <select name="dropdown" id="to">
                 <option value="USD">USD</option>
                 <option value="INR" selected>INR</option>
             </select>
-            <input type="number" value="90">
+            <input type="number" value="90" id="output">
         </div>
 </div>
 </form>
 <p>The Exchange rate is</p>
 <p id="exchange">: </p>
 </body>
-<script src="script.js"></script>
+<script type="module"  src="script.js"></script>
+<script src="code.js"></script>
 </html>
