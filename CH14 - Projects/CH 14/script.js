@@ -13,9 +13,8 @@ for (let dropdown of drops) {
         option.innerHTML = currency;
         option.value = currency;
         dropdown.append(option);
+        updateflag();
     }
 }
-const amount = document.querySelector('#input');
-const amount2 = document.querySelector('#output');
-const finalEx = document.querySelector('#exchange');
-const btn = document.querySelector('#ex');
+
+
